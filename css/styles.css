@@ -469,30 +469,23 @@ img.icon {
   }
 }
 
-.cv-header {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1/3;
-  display: -ms-grid;
-  display: grid;
-  gap: 0 1cm;
-  -ms-grid-columns: 33% 1cm 67%;
-  grid-template-columns: 33% 67%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.cv-header img {
+.cv-portrait img {
   border-radius: 50%;
   max-width: 128px;
   margin: auto;
   display: block;
 }
-.cv-header .name {
+
+.cv-head {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.cv-head .name {
   font-size: 52px;
   line-height: 1;
 }
-.cv-header .job {
+.cv-head .job {
   font-weight: 600;
   color: #1a50e6;
   font-size: 1.25em;
