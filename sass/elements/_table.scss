@@ -1,0 +1,28 @@
+table {
+  border-collapse: collapse;
+  font-variant-numeric: lining-nums tabular-nums;
+  max-width: 100%;
+  white-space: nowrap;
+  width: 100%;
+
+
+  th {
+    color: darken($text-font-color, 15%);
+    padding: 0.5rem;
+    text-align: left;
+  }
+
+  caption {
+    color: $text-font-color;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: left;
+  }
+
+
+  td {padding: 0.5rem;}
+
+
+  tbody tr:not(last-child) {border-top: 1px solid $divider-color;}
+
+}

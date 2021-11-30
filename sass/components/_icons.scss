@@ -1,0 +1,9 @@
+svg.icon,
+img.icon {
+  display: inline-block;
+  height: var(--icon-size, 1em);
+  stroke: currentColor;
+  stroke-width: 0;
+  transition-duration: 300ms;
+  width: var(--icon-size, 1em);
+}

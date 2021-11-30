@@ -1,0 +1,27 @@
+// **
+// * BOX SHADOW SETTING
+// **
+
+$box-shadow-tiny: (
+  0 0 3px hsla(0deg, 0%, 0%, 0.05),
+  0 2px 3px hsla(0deg, 0%, 0%, 0.18)
+);
+
+$box-shadow-medium: (
+  0 0 3px hsla(0deg, 0%, 0%, 0.02),
+  0 4px  4px hsla(0deg, 0%, 0%, 0.08),
+  0 8px 16px hsla(0deg, 0%, 0%, 0.12)
+);
+
+$box-shadow-large: (
+  0 0 6px hsla(0deg, 0%, 0%, 0.02),
+  0 8px  16px hsla(0deg, 0%, 0%, 0.04),
+  0 12px 32px hsla(0deg, 0%, 0%, 0.08)
+);
+
+$box-shadow-huge: (
+  0 0 6px hsla(0deg, 0%, 0%, 0.08),
+  0 12px 32px hsla(0deg, 0%, 0%, 0.08),
+  0 24px 64px hsla(0deg, 0%, 0%, 0.08)
+);
+

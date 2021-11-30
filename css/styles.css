@@ -1,0 +1,650 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-hyphens: none;
+      -ms-hyphens: none;
+          hyphens: none;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  margin: 0;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+  }
+}
+body {
+  --main-padding: 0.75em;
+  background-color: #fff;
+  color: #666666;
+  font-family: "Merriweather", "Iowan Old Style", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", "serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+  text-rendering: optimizeSpeed;
+}
+@media (min-width: 37.5em) {
+  body {
+    --main-padding: 1.5em;
+  }
+}
+
+hr {
+  background-color: var(--hr-color, rgba(0, 0, 0, 0.25));
+  border: 0;
+  display: block;
+  height: var(--hr-height, 2px);
+  margin-left: auto;
+  margin-right: auto;
+  width: var(--hr-width, 100%);
+}
+
+a {
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+  color: currentColor;
+}
+
+ul,
+ol {
+  list-style-position: inside;
+}
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-left: 1em;
+}
+
+ul li {
+  list-style-type: disc;
+}
+ul li li {
+  list-style-type: circle;
+}
+
+li::marker {
+  color: var(--marker-color, #1a50e6);
+}
+
+ul[class],
+ol[class] {
+  margin-left: 0;
+}
+ul[class] > li,
+ol[class] > li {
+  list-style: none;
+}
+
+.list-chevron > li,
+.list-check > li {
+  padding-left: 0.75em;
+  position: relative;
+}
+.list-chevron > li::before,
+.list-check > li::before {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 0.625em 0.625em;
+  content: "";
+  display: inline-block;
+  height: 1em;
+  left: 0;
+  position: absolute;
+  top: 0.33em;
+  width: 0.625em;
+}
+
+.list-chevron > li {
+  padding-left: 0.75em;
+}
+
+.list-check > li::before {
+  -webkit-transform: translateX(-2px);
+          transform: translateX(-2px);
+}
+
+.list-chevron.icon-filled > li,
+.list-check.icon-filled > li {
+  padding-left: 1.25em;
+}
+.list-chevron.icon-filled > li::before,
+.list-check.icon-filled > li::before {
+  background-color: white;
+  background-size: 0.5em 0.5em;
+  border-radius: 4px;
+  -webkit-transform: none;
+          transform: none;
+  width: 1em;
+}
+
+.list-chevron.icon-rounded > li::before,
+.list-check.icon-rounded > li::before {
+  border-radius: 50%;
+}
+
+.list-chevron > li::before {
+  background-image: url("data:image/svg+xml;utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 13' fill-rule='evenodd' clip-rule='evenodd' stroke-linejoin='round' stroke-miterlimit='2'%3E%3Cpath fill='%231a50e6' d='M.297 2.125L1.703.719l6 6-6 6-1.406-1.406 4.594-4.594L.297 2.125z' fill-rule='nonzero'/%3E%3C/svg%3E%0A");
+}
+
+.list-check > li::before {
+  background-image: url("data:image/svg+xml;utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%231a50e6' d='M27 4L12 19l-7-7-5 5 12 12L32 9z'/%3E%3C/svg%3E%0A");
+}
+
+abbr[title] {
+  border-bottom: 0;
+  cursor: help;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+
+address {
+  font-style: 400;
+  line-height: 1.5;
+}
+
+mark {
+  background: rgba(26, 80, 230, 0.1);
+  color: #1a50e6;
+}
+
+small {
+  font-size: 0.75em;
+}
+
+sup,
+.sup,
+sub,
+.sub {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup,
+.sup {
+  top: -0.33em;
+}
+
+sub,
+.sub {
+  bottom: -0.25em;
+}
+
+strong,
+b {
+  color: #666666;
+  font-weight: 700;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  color: var(--title-color, black);
+  font-family: "Mulish", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+.h1 {
+  font-size: 1.75rem;
+}
+@media (min-width: 37.5em) {
+  h1,
+.h1 {
+    font-size: 1.9375rem;
+  }
+}
+@media (min-width: 48em) {
+  h1,
+.h1 {
+    font-size: 2.125rem;
+  }
+}
+@media (min-width: 80em) {
+  h1,
+.h1 {
+    font-size: 2.625rem;
+  }
+}
+
+h2,
+.h2 {
+  font-size: 1.5625rem;
+}
+@media (min-width: 37.5em) {
+  h2,
+.h2 {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 48em) {
+  h2,
+.h2 {
+    font-size: 1.9375rem;
+  }
+}
+@media (min-width: 80em) {
+  h2,
+.h2 {
+    font-size: 2.25rem;
+  }
+}
+
+h3,
+.h3 {
+  font-size: 1.375rem;
+}
+@media (min-width: 37.5em) {
+  h3,
+.h3 {
+    font-size: 1.5625rem;
+  }
+}
+@media (min-width: 48em) {
+  h3,
+.h3 {
+    font-size: 1.75rem;
+  }
+}
+@media (min-width: 80em) {
+  h3,
+.h3 {
+    font-size: 1.9375rem;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 1.1875rem;
+}
+@media (min-width: 37.5em) {
+  h4,
+.h4 {
+    font-size: 1.4375rem;
+  }
+}
+@media (min-width: 48em) {
+  h4,
+.h4 {
+    font-size: 1.5625rem;
+  }
+}
+
+h5,
+.h5 {
+  font-size: 1rem;
+}
+@media (min-width: 25.625em) {
+  h5,
+.h5 {
+    font-size: 1.1875rem;
+  }
+}
+
+h6,
+.h6 {
+  font-size: 0.8125rem;
+}
+
+h1 small,
+.h1 small,
+h2 small,
+.h2 small,
+h3 small,
+.h3 small,
+h4 small,
+.h4 small,
+h5 small,
+.h5 small,
+h6 small,
+.h6 small {
+  font-size: 66%;
+  line-height: 0;
+}
+
+svg.icon,
+img.icon {
+  display: inline-block;
+  height: var(--icon-size, 1em);
+  stroke: currentColor;
+  stroke-width: 0;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  width: var(--icon-size, 1em);
+}
+
+.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0.25em 0;
+}
+.tags .tag {
+  padding: 0.125em;
+  line-height: 1;
+  -webkit-box-shadow: 0 0 0 1px var(--ring-color, rgba(0, 0, 0, 0.2));
+          box-shadow: 0 0 0 1px var(--ring-color, rgba(0, 0, 0, 0.2));
+  border-radius: 4px;
+}
+
+.line-with-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25em;
+}
+.line-with-icon .icon {
+  color: #1a50e6;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  --icon-size: 1.5em;
+}
+
+.cv {
+  display: -ms-grid;
+  display: grid;
+  gap: 1cm;
+  -ms-grid-columns: 33% 1cm 67%;
+  grid-template-columns: 33% 67%;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 2em 2cm 2cm 1cm;
+  position: relative;
+  width: 21cm;
+}
+.cv:after {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-bottom: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  color: #cc3333;
+  content: "⚠ Page limit";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Mulish", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  height: 29.5cm;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  text-transform: uppercase;
+  top: 0;
+  z-index: -1;
+}
+@media print {
+  .cv:after {
+    display: none;
+  }
+}
+
+.cv-header {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  display: -ms-grid;
+  display: grid;
+  gap: 0 1cm;
+  -ms-grid-columns: 33% 1cm 67%;
+  grid-template-columns: 33% 67%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cv-header img {
+  border-radius: 50%;
+  max-width: 128px;
+  margin: auto;
+  display: block;
+}
+.cv-header .name {
+  font-size: 52px;
+  line-height: 1;
+}
+.cv-header .job {
+  font-weight: 600;
+  color: #1a50e6;
+  font-size: 1.25em;
+}
+
+.cv-sidebar {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5em;
+  position: relative;
+}
+.cv-sidebar > :first-child {
+  position: relative;
+}
+.cv-sidebar > :first-child::before {
+  background-color: #1a50e6;
+  border: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  margin: 0 auto;
+  -webkit-transform: translateY(-1em);
+          transform: translateY(-1em);
+  width: 2.5em;
+}
+.cv-sidebar .sidebar-title {
+  font-size: 21px;
+  margin-bottom: 0.5rem;
+}
+.cv-sidebar ul {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.5em;
+}
+
+.cv-skills .tag {
+  --ring-color: #1a50e6;
+  color: #1a50e6;
+  padding: 0.25em;
+}
+
+.cv-baseline {
+  font-style: italic;
+  font-size: 1em;
+  display: -ms-grid;
+  display: grid;
+  gap: 0.5em;
+}
+.cv-baseline strong {
+  color: #000;
+}
+
+.cv-main {
+  display: -ms-grid;
+  display: grid;
+  gap: 2.5em;
+}
+
+.cv-main .section-title {
+  text-transform: uppercase;
+  font-size: 26px;
+  margin-bottom: 0.5rem;
+}
+
+.experiences {
+  display: -ms-grid;
+  display: grid;
+  gap: 1.5em;
+}
+
+.experience-name {
+  font-size: 17px;
+  color: #1a50e6;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.experience-infos {
+  font-family: "Mulish", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.experience-date {
+  color: #000;
+  font-weight: bold;
+}
+
+.experience-description li {
+  list-style: disc;
+}
+
+.project {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 128px 0.5em 1fr;
+  grid-template-columns: 128px 1fr;
+  gap: 0.5em;
+  margin-top: 0.25em;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.project-thumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.project-thumb img {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.project-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25em;
+}
+.project-name a {
+  background: none;
+  border-bottom: 1px solid;
+}
+
+.section-aboutme {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.5em 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+}
+.section-aboutme .section-title {
+  font-size: 1.3125rem;
+}
+.section-aboutme ul {
+  display: -ms-grid;
+  display: grid;
+  gap: 0.25em;
+}
+.section-aboutme ul .icon {
+  --icon-size: 1em;
+}

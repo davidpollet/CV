@@ -1,0 +1,98 @@
+ul,
+ol {
+  list-style-position: inside;
+
+  ul,
+  ol {
+    margin-left: 1em;
+  }
+}
+
+ul li {
+  list-style-type: disc;
+
+  li {
+    list-style-type: circle;
+  }
+}
+
+li {
+  &::marker {
+    color: var(--marker-color, $theme-color-second);
+  }
+}
+
+ul[class],
+ol[class] {
+  margin-left: 0;
+
+  > li {
+    list-style: none;
+  }
+}
+
+// * List-chevron / list-check
+.list-chevron > li,
+.list-check > li {
+  padding-left: 0.75em;
+  position: relative;
+
+  &::before {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: em(10px) em(10px);
+    content: "";
+    display: inline-block;
+    height: 1em;
+    left: 0;
+    position: absolute;
+    top: 0.33em;
+    width: em(10px);
+  }
+}
+
+.list-chevron > li {
+  padding-left: 0.75em;
+}
+
+.list-check > li {
+  &::before {
+    transform: translateX(-2px);
+  }
+}
+
+// * ==> Avec un fond
+.list-chevron.icon-filled > li,
+.list-check.icon-filled > li {
+  padding-left: 1.25em;
+
+  &::before {
+    background-color: lighten($theme-color-second, 60%);
+    background-size: em(8px) em(8px);
+    border-radius: $border-radius-tiny;
+    transform: none;
+    width: 1em;
+  }
+}
+
+// * ==> Icon circle
+.list-chevron.icon-rounded > li,
+.list-check.icon-rounded > li {
+  &::before {
+    border-radius: 50%;
+  }
+}
+
+// *
+// * lists Icons background
+// *
+
+// * List-chevron icon
+.list-chevron > li::before {
+  background-image: get-icon("chevron-right", $theme-color-second);
+}
+
+// * List-check icon
+.list-check > li::before {
+  background-image: get-icon("check", $theme-color-second);
+}

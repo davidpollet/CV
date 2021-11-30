@@ -1,0 +1,205 @@
+.cv {
+  display: grid;
+  gap: 1cm;
+  grid-template-columns: 33% 67%;
+  align-items: start;
+  padding: 2em 2cm 2cm 1cm;
+  position: relative;
+  width: 21cm;
+
+  &:after {
+    align-items: flex-end;
+    border-bottom: 1px solid $grey-90;
+    border-right: 1px solid $grey-90;
+    color: hsl(0, 60, 50);
+    content: "⚠ Page limit";
+    display: flex;
+    font-family: $title-font-family;
+    font-weight: bold;
+    height: 29.5cm;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    text-transform: uppercase;
+    top: 0;
+    z-index: -1;
+    @media print {
+      display: none;
+    }
+  }
+}
+
+// *
+// * CV Header
+// *
+.cv-header {
+  grid-column: 1 / 3;
+  display: grid;
+  gap: 0 1cm;
+  grid-template-columns: 33% 67%;
+  align-items: center;
+
+  img {
+    border-radius: 50%;
+    max-width: 128px;
+    margin: auto;
+    display: block;
+  }
+
+  .name {
+    font-size: 52px;
+    line-height: 1;
+  }
+
+  .job {
+    font-weight: 600;
+    color: $theme-color-second;
+    font-size: 1.25em;
+  }
+}
+
+// *
+// * Sidebar
+// *
+.cv-sidebar {
+  display: grid;
+  gap: 1.5em;
+  position: relative;
+
+  > :first-child {
+    position: relative;
+    &::before {
+      background-color: $theme-color-second;
+      border: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      margin: 0 auto;
+      transform: translateY(-1em);
+      width: 2.5em;
+    }
+  }
+
+  .sidebar-title {
+    font-size: 21px;
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    display: grid;
+    gap: 0.5em;
+  }
+}
+
+.cv-skills {
+  .tag {
+    --ring-color: #{$theme-color-second};
+    color: $theme-color-second;
+    padding: 0.25em;
+  }
+}
+
+.cv-baseline {
+  font-style: italic;
+  font-size: 1em;
+  display: grid;
+  gap: 0.5em;
+  strong {
+    color: #000;
+  }
+}
+
+// *
+// * Main
+// *
+.cv-main {
+  display: grid;
+  gap: 2.5em;
+}
+
+.cv-main .section-title {
+  text-transform: uppercase;
+  font-size: 26px;
+  margin-bottom: 0.5rem;
+}
+
+.experiences {
+  display: grid;
+  gap: 1.5em;
+}
+
+.experience-name {
+  font-size: 17px;
+  color: $theme-color-second;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.experience-infos {
+  font-family: $title-font-family;
+  display: flex;
+  justify-content: space-between;
+}
+
+.experience-date {
+  color: #000;
+  font-weight: bold;
+}
+
+.experience-description {
+  li {
+    list-style: disc;
+  }
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 128px 1fr;
+  gap: 0.5em;
+  margin-top: 0.25em;
+  align-items: flex-end;
+}
+
+.project-thumb {
+  display: flex;
+  flex-direction: column;
+
+  img {
+    flex-grow: 1;
+    border-radius: $border-radius-tiny;
+    object-fit: cover;
+    border: 1px solid rgba(#000, 0.1);
+  }
+}
+
+.project-name {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25em;
+
+  a {
+    background: none;
+    border-bottom: 1px solid;
+  }
+}
+
+.section-aboutme {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+
+  .section-title {
+    font-size: rem(21px);
+  }
+
+  ul {
+    display: grid;
+    gap: 0.25em;
+
+    .icon {
+      --icon-size: 1em;
+    }
+  }
+}

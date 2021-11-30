@@ -1,0 +1,9 @@
+hr {
+	background-color: var(--hr-color, $divider-color);
+	border: 0;
+	display: block;
+	height: var(--hr-height, 2px);
+  margin-left: auto;
+  margin-right: auto;
+	width: var(--hr-width, 100%);
+}

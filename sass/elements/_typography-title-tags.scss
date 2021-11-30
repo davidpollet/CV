@@ -1,0 +1,101 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  color: var(--title-color, $title-font-color);
+  font-family: $title-font-family;
+  font-weight: $title-font-weight;
+  line-height: $title-line-height;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+.h1 {
+  font-size: rem(28px);
+  @include respond-from($tablet-tiny) {
+    font-size: rem(31px);
+  }
+  @include respond-from($tablet-medium) {
+    font-size: rem(34px);
+  }
+  @include respond-from($laptop-tiny) {
+    font-size: rem(42px);
+  }
+}
+
+h2,
+.h2 {
+  font-size: rem(25px);
+  @include respond-from($tablet-tiny) {
+    font-size: rem(28px);
+  }
+  @include respond-from($tablet-medium) {
+    font-size: rem(31px);
+  }
+  @include respond-from($laptop-tiny) {
+    font-size: rem(36px);
+  }
+}
+
+h3,
+.h3 {
+  font-size: rem(22px);
+  @include respond-from($tablet-tiny) {
+    font-size: rem(25px);
+  }
+  @include respond-from($tablet-medium) {
+    font-size: rem(28px);
+  }
+  @include respond-from($laptop-tiny) {
+    font-size: rem(31px);
+  }
+}
+
+h4,
+.h4 {
+  font-size: rem(19px);
+  @include respond-from($tablet-tiny) {
+    font-size: rem(23px);
+  }
+  @include respond-from($tablet-medium) {
+    font-size: rem(25px);
+  }
+}
+
+h5,
+.h5 {
+  font-size: rem(16px);
+  @include respond-from($mobile-large) {
+    font-size: rem(19px);
+  }
+}
+
+h6,
+.h6 {
+  font-size: rem(13px);
+}
+
+h1 small,
+.h1 small,
+h2 small,
+.h2 small,
+h3 small,
+.h3 small,
+h4 small,
+.h4 small,
+h5 small,
+.h5 small,
+h6 small,
+.h6 small {
+  font-size: 66%;
+  line-height: 0;
+}

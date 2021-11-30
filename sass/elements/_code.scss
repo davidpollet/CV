@@ -1,0 +1,13 @@
+code,
+kbd,
+pre,
+samp {
+  font-family: $font-stack-system-mono;
+  font-size: 1em;
+}
+
+pre {
+  margin-bottom: 1rem;
+  margin-top: 0;
+  overflow: auto;
+}

@@ -1,0 +1,7 @@
+blockquote {
+  border-left: 2px solid $theme-color-second;
+  font-style: italic;
+  padding-left: 0.75rem;
+  position: relative;
+  quotes: '«' '»' '‹' '›';
+}

@@ -1,0 +1,54 @@
+// * abbr *
+abbr[title] {
+  border-bottom: 0;
+  cursor: help;
+  text-decoration: underline dotted;
+  text-decoration-skip-ink: none;
+}
+
+
+// * Adress
+address {
+  font-style: $text-font-weight;
+  line-height: $text-line-height;
+}
+
+
+// * Mark
+mark {
+  background: rgba($theme-color-second, 0.1);
+  color: $theme-color-second;
+}
+
+
+
+// * Small
+small { font-size: 0.75em;}
+
+
+
+// * Sub / Sup
+sup,
+.sup,
+sub,
+.sub {
+  font-size: 0.75em;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup,
+.sup {top: -0.33em; }
+
+sub,
+.sub {bottom: -0.25em;}
+
+
+
+// * Strong
+strong,
+b {
+  color: $text-font-weight-bold-color;
+  font-weight: $text-font-weight-bold;
+}

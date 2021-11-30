@@ -1,0 +1,11 @@
+.line-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+
+  .icon {
+    color: $theme-color-second;
+    flex-shrink: 0;
+    --icon-size: 1.5em;
+  }
+}

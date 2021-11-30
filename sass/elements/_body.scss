@@ -1,0 +1,16 @@
+body {
+  --main-padding: 0.75em;
+  background-color: $theme-color-main;
+  color: $text-font-color;
+  font-family: $text-font-family;
+  font-size: $text-font-size;
+  font-weight: $text-font-weight;
+  line-height: $text-line-height;
+  margin: 0;
+  text-align: left;
+  text-rendering: optimizeSpeed;
+
+  @include respond-from($tablet-tiny) {
+    --main-padding: 1.5em;
+  }
+}

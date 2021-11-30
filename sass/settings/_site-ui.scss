@@ -1,0 +1,42 @@
+// *
+// * THEME COLORS
+// *
+// * Theme colors
+$theme-color-main: #fff; // Body background
+$theme-color-second: hsl(224, 80%, 50%); // ui elements
+$theme-color-third: turquoise;
+$theme-color-fourth: null;
+
+// Layout
+$site-max-width: 100%;
+
+// Divider
+// Table, hr, input text
+$divider-color: rgba(#000, 0.25);
+
+// Buttons
+$button-radius: $border-radius-tiny !default;
+$button-font-weight: 400;
+
+// *
+// * Typography
+// *
+// Body
+$text-font-color: hsl(0, 0%, 40%);
+$text-font-color-accent: $theme-color-second;
+$text-font-family: "Merriweather", $font-stack-system-serif;
+$text-font-size: 14px;
+$text-line-height: 1.5;
+$text-font-weight: 400;
+$text-font-weight-bold: 700;
+$text-font-weight-bold-color: $text-font-color;
+$hyphenation: false;
+
+// title
+$title-font-color: hsl(0, 0%, 0%);
+$title-font-color-bold: $title-font-color;
+$title-font-family: "Mulish", $font-stack-system-sans-serif;
+$title-font-style: normal;
+$title-font-weight: 800;
+$title-font-weight-bold: 900;
+$title-line-height: 1.2;
