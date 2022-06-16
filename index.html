@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -18,41 +19,41 @@
   <div class="cv-portrait"><img src="./img/portrait.jpg" alt="" /></div>
   <div class="cv-head">
     <h1 class="name">David Pollet</h1>
-    <p class="job">Développeur Front-end avec sensibilité UI•UX</p>
+    <p class="job">Développeur Front React avec 10 ans d'XP en Inté web <br /> Skills UX/UI</p>
   </div>
 
 
   <!-- _Sidebar -->
   <aside class="cv-sidebar">
-    <!-- _Baseline -->
-    <div class="cv-baseline">
-      <p>
-        Intégrateur Web et UI Designer <strong>depuis 2012</strong>, j'ai
-        évolué vers React et son écosystème pour participer à des projets
-        plus complexe.
-      </p>
-
-      <p>
-        Je suis porté par l'envie de coder et/ou créer des interfaces que les utilisateurs aiment manipuler.
-      </p>
-    </div>
-
     <!-- _Compétence -->
     <div class="cv-skills">
       <h2 class="sidebar-title">Compétences</h2>
+      <h3 class="sidebar-subtitle">Langages</h3>
       <div class="tags">
         <span class="tag">Expert Sass/CSS</span>
+        <span class="tag">Javascript</span>
+        <span class="tag">Typescript</span>
+        <span class="tag">JSX</span>
+      </div>
+      <h3 class="sidebar-subtitle">Technos</h3>
+      <div class="tags">
         <span class="tag">React</span>
-        <span class="tag">Javascript ES6</span>
         <span class="tag">NextJS</span>
+        <span class="tag">Redux</span>
         <span class="tag">Styled Components</span>
-        <span class="tag">NPM</span>
+        <span class="tag">Tailwind</span>
         <span class="tag">Git</span>
-        <span class="tag">UI Design</span>
-        <span class="tag">Design in browser</span>
-        <span class="tag">Qualité Web</span>
-        <span class="tag">Photoshop</span>
-        <span class="tag">Ergonomie Web</span>
+        <span class="tag">API Rest & GraphQL</span>
+      </div>
+      <h3 class="sidebar-subtitle">Soft Skills</h3>
+      <div class="tags">
+        <span class="tag">Autonome</span>
+        <span class="tag">Créatif</span>
+        <span class="tag">Autodidacte</span>
+        <span class="tag">Investi</span>
+        <span class="tag">Humour</span>
+        <span class="tag">Ouvert</span>
+        <span class="tag">Curieux</span>
       </div>
     </div>
 
@@ -66,7 +67,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
           </svg>
-          37 ans
+          <span id="my-age"></span>
         </li>
         <li class="line-with-icon">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -78,14 +79,6 @@
           </svg>
           Calais, France
         </li>
-        <!-- <li class="line-with-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" class="icon h-6 w-6" fill="none" viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-          </svg>
-          Full Remote
-        </li> -->
         <li class="line-with-icon">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon h-6 w-6" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
@@ -93,6 +86,15 @@
               d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
           </svg>
           Disponibilité Immédiate
+        </li>
+        <li class="line-with-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+            role="img" class="icon " width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+            <path fill="currentColor"
+              d="m12.87 15.07l-2.54-2.51l.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35C8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5l3.11 3.11l.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z">
+            </path>
+          </svg>
+          Anglais B2
         </li>
       </ul>
     </div>
@@ -157,18 +159,52 @@
   <main class="cv-main">
     <!-- Expérience -->
     <section class="section-experiences">
-      <h2 class="section-title">Expériences</h2>
+      <h2 class="section-title">Expériences / Projets</h2>
       <ul class="experiences">
-        <li class="experience">
-          <h3 class="experience-name">Développeur React</h3>
-          <div class="experience-infos">
-            <p class="experience-date">Depuis fin 2021</p>
-            <p class="experience-place">Freelance</p>
-          </div>
-          <div class="experience-description">
-            <p>
-              Création de web app avec React et son ecosystème (NextJS, Styled compontents, Redux, etc.)
-            </p>
+        <li class="experience dev">
+          <h3 class="experience-name">Développement React</h3>
+          <div class="project">
+            <div class="project-thumb">
+              <img src="./img/cockpitt.png" alt="" />
+            </div>
+            <div class="project-main">
+              <h3 class="project-name">
+                <a href="https://cockpitt.vercel.app" target="_blank">
+                  cockpitt.vercel.app
+                </a>
+              </h3>
+              <div class="project-description">
+                Design et developpement d'une app pour suivre ses tâches et son chiffre d'affaires.
+              </div>
+            </div>
+            <div class="project-details">
+              <div>
+                <p class="is-title">Langage & Technos :</p>
+                <ul class="tags">
+                  <li class="tag">React</li>
+                  <li class="tag">NextJS</li>
+                  <li class="tag">Typescript</li>
+                  <li class="tag">Tailwind</li>
+                  <li class="tag">Redux</li>
+                  <li class="tag">Next Auth</li>
+                  <li class="tag">MongoDB</li>
+                  <li class="tag">Framer Motion</li>
+                  <li class="tag">DayJS</li>
+                  <li class="tag">Prettier</li>
+                  <li class="tag">EsLint</li>
+                </ul>
+              </div>
+              <div>
+                <p class="is-title">Techniques:</p>
+                <ul class="tags">
+                  <li class="tag"><abbr title="Server-Side-Rendering">SSR</abbr></li>
+                  <li class="tag">Optimistic Update</li>
+                  <li class="tag">Custom Hooks</li>
+                  <li class="tag">NextJS API Feature</li>
+                  <li class="tag">Dark Mode</li>
+                </ul>
+              </div>
+            </div>
           </div>
           <div class="project">
             <div class="project-thumb">
@@ -179,12 +215,54 @@
                 <a href="https://calvin-calc.netlify.app">calvin-calc.netlify.app</a>
               </h3>
               <div class="project-description">
-                <p>
-                  Conception et développement d'une calculatrice / convertisseur
-                  d'unité avec React
-                </p>
+                Design et développement d'une calculatrice / convertisseur d'unité via un champ "text".
               </div>
             </div>
+            <div class="project-details">
+              <div>
+                <p class="is-title">Langage & Technos :</p>
+                <ul class="tags">
+                  <li class="tag">React</li>
+                  <li class="tag">Vite</li>
+                  <li class="tag">Sass Module</li>
+                  <li class="tag">Regex</li>
+                </ul>
+              </div>
+              <div>
+                <p class="tag is-title">Techniques:</p>
+                <ul class="tags">
+                  <li class="tag">Debounce</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="experience site-web">
+          <h3 class="experience-name">Intégrateur Web / UI Designer</h3>
+          <div class="experience-infos">
+            <p class="experience-date">Depuis 2012</p>
+          </div>
+          <div class="experience-description">
+            <ul>
+              <li>
+                Design et intégration « from scratch » de sites
+                WordPress & WooCommerce.
+              </li>
+            </ul>
+          </div>
+          <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap: .125rem; padding-top: .5em;">
+            <a class="project-card" href="https://so-eko.com" target="_blank">
+              <img src="./img/soeko.png" alt="" />
+              <span class="project-name">so-eko.com</span>
+            </a>
+            <a class="project-card" href="https://canolys.fr/" target="_blank">
+              <img src="./img/canolys.jpg" alt="" />
+              <span class="project-name">Canolys.fr</span>
+            </a>
+            <a class="project-card" href="https://expertinbox.com" target="_blank">
+              <img src="./img/eib.png" alt="" />
+              <span class="project-name">expertinbox.com</span>
+            </a>
           </div>
         </li>
         <li class="experience">
@@ -196,121 +274,21 @@
           <div class="experience-description">
             <ul>
               <li>TD « Intégration web » pour des licences pros</li>
-              <li>
-                TD « Interface Homme-Machine » pour des 1<sup>ère</sup>
-                année
-              </li>
             </ul>
-          </div>
-        </li>
-        <li class="experience">
-          <h3 class="experience-name">Intégrateur Web / UI Designer</h3>
-          <div class="experience-infos">
-            <p class="experience-date">Depuis 2012</p>
-            <p class="experience-place">Freelance</p>
-          </div>
-          <div class="experience-description">
-            <ul>
-              <li>
-                Conception et intégration « from scratch » de sites
-                WordPress/WooCommerce.
-              </li>
-              <li>Collaboration avec un développeur back via Git</li>
-            </ul>
-          </div>
-          <div class="project">
-            <div class="project-thumb">
-              <img src="./img/soeko.png" alt="" />
-            </div>
-            <div class="project-main">
-              <h3 class="project-name">
-                <a href="https://so-eko.com">so-eko.com</a>
-              </h3>
-              <div class="project-description">
-                <p>Conception et intégration d'un site vitrine WordPress</p>
-              </div>
-            </div>
-          </div>
-          <div class="project">
-            <div class="project-thumb">
-              <img src="./img/eib.png" alt="" />
-            </div>
-            <div class="project-main">
-              <h3 class="project-name">
-                <a href="https://expertinbox.com">expertinbox.com</a>
-              </h3>
-              <div class="project-description">
-                <p>Conception et intégration d'un site e-commerce WordPress WooCommerce</p>
-              </div>
-            </div>
-          </div>
-          <div class="project">
-            <div class="project-thumb">
-              <img src="./img/mrj.png" alt="" />
-            </div>
-            <div class="project-main">
-              <h3 class="project-name">
-                <a href="https://mr-jardinage.com">mr-jardinage.com</a>
-              </h3>
-              <div class="project-description">
-                <p>Conception et intégration d'un site vitrine WordPress</p>
-              </div>
-            </div>
           </div>
         </li>
       </ul>
     </section>
 
 
-    <!-- About Me -->
-    <section class="section-aboutme">
-      <div class="qualite">
-        <h3 class="section-title">Qualités</h3>
-        <ul>
-          <li class="line-with-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon h-6 w-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-            </svg>
-            Autodidacte
-          </li>
-          <li class="line-with-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon h-6 w-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-            </svg>
-            Fiable et investi
-          </li>
-          <li class="line-with-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon h-6 w-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-            </svg>
-            Passerelle idéale entre design et développement
-          </li>
-        </ul>
-      </div>
-      <div class="misc">
-        <h3 class="section-title">Autres</h3>
-        <ul>
-          <li class="line-with-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon h-6 w-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-            </svg>
-            Anglais B2
-          </li>
-          <li class="line-with-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon h-6 w-6" fill="none" viewBox="0 0 24 24"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
-            </svg>
-            Amateur de science
-          </li>
-        </ul>
-      </div>
-    </section>
   </main>
+
+  <script>
+    const myBirthDay = new Date("1984-07-05").getTime();
+    const now = new Date().getTime();
+    const myAge = Math.floor((now - myBirthDay) / (1000 * 60 * 60 * 24 * 365));
+    document.querySelector("#my-age").textContent = `${myAge} ans`;
+  </script>
 </body>
 
 </html>

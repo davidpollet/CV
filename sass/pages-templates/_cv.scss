@@ -12,7 +12,7 @@
     border-bottom: 1px solid $grey-90;
     border-right: 1px solid $grey-90;
     color: hsl(0, 60, 50);
-    content: "⚠ Page limit";
+    content: '⚠ Page limit';
     display: flex;
     font-family: $title-font-family;
     font-weight: bold;
@@ -52,7 +52,7 @@
   .job {
     font-weight: 600;
     color: $theme-color-second;
-    font-size: 1.25em;
+    font-size: 1.125em;
   }
 }
 
@@ -69,7 +69,7 @@
     &::before {
       background-color: $theme-color-second;
       border: 0;
-      content: "";
+      content: '';
       display: block;
       height: 2px;
       margin: 0 auto;
@@ -79,8 +79,16 @@
   }
 
   .sidebar-title {
-    font-size: 21px;
+    font-size: rem(21px);
     margin-bottom: 0.5rem;
+  }
+
+  .sidebar-subtitle {
+    font-size: rem(16px);
+    margin: 0.5rem 0 0.25rem;
+    font-weight: normal;
+    font-variant: small-caps;
+    opacity: 0.8;
   }
 
   ul {
@@ -91,9 +99,11 @@
 
 .cv-skills {
   .tag {
-    --ring-color: #{$theme-color-second};
+    --ring-color: rgba(0, 0, 0, 0.1);
     color: $theme-color-second;
     padding: 0.25em;
+    flex-grow: 1;
+    text-align: center;
   }
 }
 
@@ -127,7 +137,7 @@
 }
 
 .experience-name {
-  font-size: 17px;
+  font-size: rem(18px);
   color: $theme-color-second;
   text-transform: uppercase;
   font-weight: 700;
@@ -152,10 +162,9 @@
 
 .project {
   display: grid;
-  grid-template-columns: 128px 1fr;
+  grid-template-columns: 196px 1fr;
   gap: 0.5em;
   margin-top: 0.25em;
-  align-items: flex-end;
 }
 
 .project-thumb {
@@ -181,21 +190,41 @@
   }
 }
 
-.section-aboutme {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5em;
+.project-card {
+  background: none;
+  color: black;
+  border: 0;
+  font-family: $title-font-family;
+  text-align: center;
 
-  .section-title {
-    font-size: rem(21px);
+  img {
+    border-radius: $border-radius-tiny;
+    object-fit: cover;
+    border: 1px solid rgba(#000, 0.1);
   }
 
-  ul {
-    display: grid;
-    gap: 0.25em;
+  .project-name {
+    font-size: rem(14px);
+    padding: 0;
+    border-bottom: 1px solid currentColor;
+    line-height: 1;
+    text-transform: capitalize;
+  }
+}
 
-    .icon {
-      --icon-size: 1em;
-    }
+.experience.dev .project {
+  padding: 0.25em;
+  border-radius: $border-radius-tiny;
+  border: 1px solid rgba(#000, 0.1);
+
+  .project-details {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 1em;
+  }
+
+  .is-title {
+    color: $theme-color-second;
   }
 }
