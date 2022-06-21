@@ -1,5 +1,16 @@
 a {
-  border-bottom: 1px solid currentColor;
   text-decoration: none;
   color: currentColor;
+  align-items: center;
+
+  .icon-link {
+    color: currentColor !important;
+    width: 12px;
+    display: inline-block;
+    align-items: center;
+    opacity: 0.75;
+    position: relative;
+    top: 0.125em;
+    margin-left: 0.25ch;
+  }
 }

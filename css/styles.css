@@ -77,7 +77,7 @@ iframe {
 body {
   --main-padding: 0.75em;
   background-color: #fff;
-  color: hsl(0deg, 0%, 40%);
+  color: hsl(0deg, 0%, 42%);
   font-family: "Merriweather", "Iowan Old Style", "Apple Garamond", "Baskerville", "Times New Roman", "Droid Serif", "Times", "Source Serif Pro", "serif", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
   font-weight: 400;
@@ -103,9 +103,23 @@ hr {
 }
 
 a {
-  border-bottom: 1px solid currentColor;
   text-decoration: none;
   color: currentColor;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+a .icon-link {
+  color: currentColor !important;
+  width: 12px;
+  display: inline-block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.75;
+  position: relative;
+  top: 0.125em;
+  margin-left: 0.25ch;
 }
 
 ul,
@@ -202,6 +216,11 @@ abbr[title] {
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
 }
+@media print {
+  abbr[title] {
+    text-decoration: none;
+  }
+}
 
 address {
   font-style: 400;
@@ -239,7 +258,7 @@ sub,
 
 strong,
 b {
-  color: hsl(0deg, 0%, 40%);
+  color: hsl(0deg, 0%, 42%);
   font-weight: 700;
 }
 
@@ -404,9 +423,6 @@ img.icon {
 .tags .tag {
   padding: 0.125em;
   line-height: 1;
-  -webkit-box-shadow: 0 0 0 1px var(--ring-color, rgba(0, 0, 0, 0.2));
-          box-shadow: 0 0 0 1px var(--ring-color, rgba(0, 0, 0, 0.2));
-  border-radius: 4px;
 }
 
 .line-with-icon {
@@ -423,6 +439,19 @@ img.icon {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   --icon-size: 1.5em;
+}
+.line-with-icon a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.line-with-icon a .icon-link {
+  position: static;
+  color: currentColor;
+  width: 14px;
 }
 
 .cv {
@@ -486,9 +515,11 @@ img.icon {
   line-height: 1;
 }
 .cv-head .job {
-  font-weight: 600;
+  font-size: 1.125rem;
+}
+.cv-head .job strong {
+  font-size: 1.25rem;
   color: hsl(224deg, 80%, 50%);
-  font-size: 1.125em;
 }
 
 .cv-sidebar {
@@ -517,25 +548,20 @@ img.icon {
 }
 .cv-sidebar .sidebar-subtitle {
   font-size: 1rem;
-  margin: 0.5rem 0 0.25rem;
+  margin: 1rem 0 0.25rem;
   font-weight: normal;
-  font-variant: small-caps;
-  opacity: 0.8;
-}
-.cv-sidebar ul {
-  display: -ms-grid;
-  display: grid;
-  gap: 0.5em;
+  color: hsl(224deg, 80%, 50%);
 }
 
+.cv-skills .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .cv-skills .tag {
-  --ring-color: rgba(0, 0, 0, 0.1);
-  color: hsl(224deg, 80%, 50%);
+  color: hsl(0deg, 0%, 42%);
   padding: 0.25em;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  text-align: center;
+  font-family: "Mulish", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
 }
 
 .cv-baseline {
@@ -564,7 +590,7 @@ img.icon {
 .experiences {
   display: -ms-grid;
   display: grid;
-  gap: 1.5em;
+  gap: 2em;
 }
 
 .experience-name {
@@ -628,7 +654,7 @@ img.icon {
 }
 .project-name a {
   background: none;
-  border-bottom: 1px solid;
+  text-transform: capitalize;
 }
 
 .project-card {
@@ -647,15 +673,12 @@ img.icon {
 .project-card .project-name {
   font-size: 0.875rem;
   padding: 0;
-  border-bottom: 1px solid currentColor;
   line-height: 1;
   text-transform: capitalize;
 }
 
-.experience.dev .project {
-  padding: 0.25em;
-  border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+.experience.dev .project:not(:first-of-type) {
+  margin-top: 1em;
 }
 .experience.dev .project .project-details {
   grid-column: 1/-1;
@@ -664,8 +687,13 @@ img.icon {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 0.5em 1em;
+  gap: 0.25em 1em;
+  font-family: "Mulish", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
 }
 .experience.dev .project .is-title {
   color: hsl(224deg, 80%, 50%);
+  font-size: 1rem;
+}
+.experience.dev .project .tag {
+  padding: 0.125em 0.25em;
 }

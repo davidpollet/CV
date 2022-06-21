@@ -50,9 +50,11 @@
   }
 
   .job {
-    font-weight: 600;
-    color: $theme-color-second;
-    font-size: 1.125em;
+    font-size: 1.125rem;
+    strong {
+      font-size: 1.25rem;
+      color: $theme-color-second;
+    }
   }
 }
 
@@ -85,25 +87,20 @@
 
   .sidebar-subtitle {
     font-size: rem(16px);
-    margin: 0.5rem 0 0.25rem;
+    margin: 1rem 0 0.25rem;
     font-weight: normal;
-    font-variant: small-caps;
-    opacity: 0.8;
-  }
-
-  ul {
-    display: grid;
-    gap: 0.5em;
+    color: $theme-color-second;
   }
 }
 
 .cv-skills {
+  .tags {
+    display: flex;
+  }
   .tag {
-    --ring-color: rgba(0, 0, 0, 0.1);
-    color: $theme-color-second;
+    color: $text-font-color;
     padding: 0.25em;
-    flex-grow: 1;
-    text-align: center;
+    font-family: $title-font-family;
   }
 }
 
@@ -133,7 +130,7 @@
 
 .experiences {
   display: grid;
-  gap: 1.5em;
+  gap: 2em;
 }
 
 .experience-name {
@@ -186,7 +183,7 @@
 
   a {
     background: none;
-    border-bottom: 1px solid;
+    text-transform: capitalize;
   }
 }
 
@@ -206,25 +203,30 @@
   .project-name {
     font-size: rem(14px);
     padding: 0;
-    border-bottom: 1px solid currentColor;
     line-height: 1;
     text-transform: capitalize;
   }
 }
 
 .experience.dev .project {
-  padding: 0.25em;
-  border-radius: $border-radius-tiny;
-  border: 1px solid rgba(#000, 0.1);
+  &:not(:first-of-type) {
+    margin-top: 1em;
+  }
 
   .project-details {
     grid-column: 1 / -1;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5em 1em;
+    gap: 0.25em 1em;
+    font-family: $title-font-family;
   }
 
   .is-title {
     color: $theme-color-second;
+    font-size: rem(16px);
+  }
+
+  .tag {
+    padding: 0.125em 0.25em;
   }
 }

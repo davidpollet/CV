@@ -4,8 +4,11 @@ abbr[title] {
   cursor: help;
   text-decoration: underline dotted;
   text-decoration-skip-ink: none;
-}
 
+  @media print {
+    text-decoration: none;
+  }
+}
 
 // * Adress
 address {
@@ -13,19 +16,16 @@ address {
   line-height: $text-line-height;
 }
 
-
 // * Mark
 mark {
   background: rgba($theme-color-second, 0.1);
   color: $theme-color-second;
 }
 
-
-
 // * Small
-small { font-size: 0.75em;}
-
-
+small {
+  font-size: 0.75em;
+}
 
 // * Sub / Sup
 sup,
@@ -39,12 +39,14 @@ sub,
 }
 
 sup,
-.sup {top: -0.33em; }
+.sup {
+  top: -0.33em;
+}
 
 sub,
-.sub {bottom: -0.25em;}
-
-
+.sub {
+  bottom: -0.25em;
+}
 
 // * Strong
 strong,

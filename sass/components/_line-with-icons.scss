@@ -8,4 +8,14 @@
     flex-shrink: 0;
     --icon-size: 1.5em;
   }
+
+  a {
+    display: flex;
+    align-items: center;
+    .icon-link {
+      position: static;
+      color: currentColor;
+      width: 14px;
+    }
+  }
 }
