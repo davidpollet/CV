@@ -498,6 +498,10 @@ img.icon {
   }
 }
 
+.text-accent {
+  color: hsl(224deg, 80%, 50%);
+}
+
 .cv-portrait img {
   border-radius: 50%;
   max-width: 128px;
@@ -525,22 +529,19 @@ img.icon {
 .cv-sidebar {
   display: -ms-grid;
   display: grid;
-  gap: 1.5em;
+  gap: 1em;
   position: relative;
 }
-.cv-sidebar > :first-child {
-  position: relative;
-}
-.cv-sidebar > :first-child::before {
-  background-color: hsl(224deg, 80%, 50%);
+.cv-sidebar .divider {
   border: 0;
   content: "";
   display: block;
-  height: 2px;
-  margin: 0 auto;
-  -webkit-transform: translateY(-1em);
-          transform: translateY(-1em);
+  border-bottom: 2px solid hsl(224deg, 80%, 50%);
+  -webkit-transform: translate(-50%, -1em);
+          transform: translate(-50%, -1em);
   width: 2.5em;
+  left: 50%;
+  position: absolute;
 }
 .cv-sidebar .sidebar-title {
   font-size: 1.3125rem;
@@ -548,9 +549,12 @@ img.icon {
 }
 .cv-sidebar .sidebar-subtitle {
   font-size: 1rem;
-  margin: 1rem 0 0.25rem;
+  margin-bottom: 0.25rem;
   font-weight: normal;
   color: hsl(224deg, 80%, 50%);
+}
+.cv-sidebar .sidebar-subtitle:not(:first-of-type) {
+  margin-top: 0.5rem;
 }
 
 .cv-skills .tags {
@@ -560,13 +564,11 @@ img.icon {
 }
 .cv-skills .tag {
   color: hsl(0deg, 0%, 42%);
-  padding: 0.25em;
+  padding: 0.125em 0.25em;
   font-family: "Mulish", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
 }
 
 .cv-baseline {
-  font-style: italic;
-  font-size: 1em;
   display: -ms-grid;
   display: grid;
   gap: 0.5em;
